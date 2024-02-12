@@ -2,13 +2,15 @@ import React from 'react';
 import {AreaLogin} from './styled';
 import Logo from './Logo.png';
 import Fundo from './Fundo.png';
-
+import FundoMobile from './FundoMobile.png';
+// eslint-disable-next-line
 export default () => {
 
     return (
         <AreaLogin>
         <div className='container-back'>
-        <img src={Fundo} alt='fundo'/>
+        <img className='desktop' src={Fundo} alt='fundo'/>
+        <img className='mobile' src={FundoMobile} alt='fundo'/>
         </div>
         <div className='container-form'>
             <div className='marca'>

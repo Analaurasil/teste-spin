@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import FundoMobile from './FundoMobile.png';
 
 export const AreaLogin = styled.div`
 
@@ -10,26 +9,35 @@ export const AreaLogin = styled.div`
         background-color:#191A24;
         width: auto;
         height: auto;
-        img{
-            width:95%;
-            margin-left: 20px;
-            margin-top: 20px;
+
+        img.desktop{
+            width: 95%;
+            height: 800px;
+           // margin-left: 2.5%;
+            margin: 20px;
         }
+
+        img.mobile{
+            display: none;
+            position: absolute;
+            left: 0;
+            width: 100%;
+        }
+
     }
 
     .container-form{
     background-color:#F4F4F4;
     padding: 50px;
     max-width: 500px;
-    height: 1080;
+    height: auto;
     margin: 0;
     border-radius: 2px;
     box-shadow: 0px 0px 8px #ccc;
+    position: relative;
+    z-index: 2;
 
     .marca{
-        text-align:center;
-        justify-content: center;
-
         img{
             width:48px;
             height: 48px;
@@ -91,7 +99,7 @@ export const AreaLogin = styled.div`
             }
         }
         h1{
-            weight: 600;
+            font-weight: 600;
             color:#3E334E;
             font-family: 'Inter', sans-serif;
             font-size: 32px;
@@ -173,17 +181,19 @@ export const AreaLogin = styled.div`
 @media (max-width: 768px){
     
     .container-back{
-        display: none;
-    }
-    .container-back{
-    background-image: url(${FundoMobile});
-    background-size: cover;
-    background-color: #ffffff;
+       img.desktop{
+         display: none;
+       }
+       img.mobile{
+         display: block;
+       }
     }
     .container-form{
         width: 100%;
         padding: 20px;
-        margin-top: 80px;
+        margin-top: 200px;
+        max-width: 100%;
+    }
     }
 }
 `;
